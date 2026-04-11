@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css Position Property</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!--  SIDEBAR -->
+    <div class="sidebar">
+      <h3>Dashboard</h3>
+      <ul>
+        <li>Home</li>
+        <li>Profile</li>
+        <li>Settings</li>
+        <li>Logout</li>
+      </ul>
+    </div>
+    <!--  MAIN -->
+    <div class="main">
+      <!--  CARD WITH BADGE -->
+      <div class="card">
+        <span class="badge">3</span>
+        <h3>Messages</h3>
+        <p>You have unread messages waiting for you.</p>
+      </div>
+
+      <div class="content">
+        <p>Scroll down to see sticky sidebar and fixed bar in action...</p>
+      </div>
+    </div>
+    <!-- 🔹 FIXED BOTTOM BAR -->
+    <div class="bottom-bar">
+      <p>🔔 You have new notifications</p>
+      <button onclick="openModal()">View</button>
+    </div>
+    <!-- 🔹 MODAL -->
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <h2>Notification</h2>
+        <p>This is a modal popup message.</p>
+        <button onclick="closeModal()">Close</button>
+      </div>
+    </div>
+    <!-- 🔹 JS FOR MODAL -->
+    <script>
+      function openModal() {
+        document.getElementById("modal").style.display = "flex";
+      }
+
+      function closeModal() {
+        document.getElementById("modal").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
